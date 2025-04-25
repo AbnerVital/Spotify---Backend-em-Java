@@ -1,10 +1,10 @@
 package br.com.alura.spotify.modelos;
 
 public class Audio {
-    private String titulo;
+    protected String titulo;
     private int totalReproducoes;
     private int curtidas;
-    private double classificacao;
+    private int classificacao;
 
     public String getTitulo() {
         return titulo;
@@ -32,12 +32,15 @@ public class Audio {
 
     public void curtir(){
         this.curtidas++;
-        System.out.println("Você acabou de curtis a música: " + this.titulo);
     }
 
     public void reproduzir(){
         this.totalReproducoes++;
-        System.out.println("A musica " + this.titulo + " está reproduzindo.");
+    }
+
+    public void totalReproducoesEhCurtidas(){
+        System.out.println("Total de reproduções: " + totalReproducoes);
+        System.out.println("Total de curtidas: " + curtidas);
     }
 
 
